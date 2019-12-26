@@ -97,3 +97,8 @@ hr{
       transform:scale(1.2);
       text-shadow: 5px 5px black;
   }
+
+button:hover{
+    transform:scale(1.2);
+    box-shadow: 5px 5px black;
+  }
