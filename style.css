@@ -109,3 +109,22 @@ button:hover{
       align-items: center;
       margin-top:20px;
   }
+
+.container{
+      margin:0;
+      flex-wrap: wrap;
+  }
+
+  .description{
+      margin:auto;
+      justify-self: space-around;
+      margin-bottom: 20px;
+  }
+
+  .entryPic{
+      width:350px;
+  }
+
+  .entryPicHorizontal{
+    width:700px;
+}
