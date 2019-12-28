@@ -102,3 +102,10 @@ button:hover{
     transform:scale(1.2);
     box-shadow: 5px 5px black;
   }
+
+  .submit{
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top:20px;
+  }
