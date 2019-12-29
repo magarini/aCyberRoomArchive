@@ -45,7 +45,25 @@
 <img class="entryPicHorizontal" src="trust.jpg">
 <iframe src="https://player.vimeo.com/video/226365764" width="640" height="480" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
-
   </div>
+    script>
+
+    var i = 0;
+    var txt = document.querySelector(".description").innerHTML;
+    console.log(txt)
+    var speed = 60; /* The speed/duration of the effect in milliseconds */
+    document.querySelector(".description").innerHTML = "";
+    
+    function typeWriter() {
+      if (i < txt.length) {
+        document.querySelector(".description").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    typeWriter();
+    
+        </script>
 </body>
 </html>
