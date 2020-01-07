@@ -128,3 +128,7 @@ button:hover{
   .entryPicHorizontal{
     width:700px;
 }
+
+.notes{
+      display:flex;
+  }
