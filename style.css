@@ -131,4 +131,6 @@ button:hover{
 
 .notes{
       display:flex;
+          justify-content: space-around;
+
   }
