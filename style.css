@@ -80,7 +80,10 @@ hr{
       border-right:1px solid;
       padding:25px;
   }
-  
+   .task{
+    border-bottom:1px solid;
+
+  }
 
   .title{
    
