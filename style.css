@@ -179,7 +179,25 @@ button:hover{
 
 .archive{
     display:flex;
+    flex-wrap:wrap;
     justify-content: space-around;
     align-items: center;
 
+}
+
+.submissions{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* carousel */
+.carousel{
+    width:400px;
+   
+    
+}
+.carousel-item{
+    width:400px;
 }
