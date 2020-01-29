@@ -139,3 +139,40 @@ button:hover{
 
 
   }
+  .hovertext{
+    text-decoration:none;
+    color:black;
+    
+    /* border:1px solid; */
+}
+
+.hovertext:hover{
+    text-decoration:none;
+    color:rgb(0, 116, 151);
+    font-size:1.3em;
+}
+.task1img{
+    display:none;
+    width:200px;
+}
+
+.hovertext:hover .task1img{
+    text-decoration: none;
+    color:black;
+
+    display:block;
+    position: absolute;
+    z-index: 1;
+    margin:50px;
+    
+}
+
+.task1archive{
+    display:flex;
+    flex-direction: column;
+}
+.task1archive{
+    border:1px dashed;
+    max-width:600px;
+    margin:20px;
+}
