@@ -194,10 +194,11 @@ button:hover{
 
 /* carousel */
 .carousel{
-    width:400px;
-   
-    
+    width:500px;
+
 }
+
 .carousel-item{
-    width:400px;
+    width:500px;
 }
+
