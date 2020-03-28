@@ -194,14 +194,14 @@ button:hover{
 
 /* carousel */
 .carousel{
-    width:400px;
-    margin:20px;
+    width:350px;
+    margin:10px;
     border:1px  solid;
 
 }
 
 .carousel-item{
-    width:400px;
+    width:350px;
 }
 
 iframe{
