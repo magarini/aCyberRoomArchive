@@ -222,3 +222,12 @@ iframe:hover{
     box-shadow:5px 10px 20px black;
 
 }
+
+#multidraggable{
+    cursor:move;
+}
+
+.imgdrag:hover{
+    transform: scale(1.2);
+    z-index: 2;
+}
