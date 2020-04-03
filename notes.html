@@ -5,10 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>a cyber room of our own</title>
-    
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
-    
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>    
+    <script
+    src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+    crossorigin="anonymous"></script>
+    <script src="multidraggable.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js' type='text/javascript'></script>
+    <script src="p5.dom.min.js"></script>
+    <script src="randomposition.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
@@ -42,13 +54,16 @@
   </main>
   <div class="container-fluid">
       <div class="row notes">
-<a href="punk-singer-gif.gif" target="_blank"><img src="punk-singer-gif.gif" class="entryPicHorizontal" ></a>
+        <div id="multidraggable">
 
-<a href="http://www.cyberartsweb.org/cpace/body/DR/self.html" target="_blank"><img src="thefragmentedself.jpg" class="entryPic" ></a>
+<a href="punk-singer-gif.gif" target="_blank"><img src="punk-singer-gif.gif" class="entryPicHorizontal imgdrag" ></a>
 
-<img class="entryPic" src="indialoguewith.gif">
-<img class="entryPicHorizontal" src="trust.jpg">
-<iframe src="https://player.vimeo.com/video/226365764" width="600" height="480" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<a href="http://www.cyberartsweb.org/cpace/body/DR/self.html" target="_blank"><img src="thefragmentedself.jpg" class="entryPic imgdrag" ></a>
+
+<img class="entryPic imgdrag" src="indialoguewith.gif">
+<img class="entryPicHorizontal imgdrag" src="trust.jpg">
+<iframe class="imgdrg" src="https://player.vimeo.com/video/226365764" width="600" height="480" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      </div>
       </div>
   </div>
     <script>
@@ -68,7 +83,51 @@
     }
 
     typeWriter();
-    
-        </script>
+    $('#multidraggable').multidraggable({
+        
+        //onCreate RETURN EVENT UI
+        create:function(event, ui) {
+            opts.onCreate ? opts.onCreate(event, ui) : {};
+        },
+        
+        //onSelecting RETURN EVENT UI
+        selecting: function( event, ui ) {
+            opts.onSelecting ? opts.onSelecting(event, ui) : {};
+        },
+        
+        //onSelected RETURN EVENT UI
+        selected:function( event, ui ) {
+            opts.onSelected ? opts.onSelected(event, ui) : {};
+        },
+        
+        //onStopSelecting RETURN EVENT UI
+        stop: function( event, ui ) {
+            var group = [];
+            $('.ui-selected').each(function(){
+                group.push(this);
+            });
+            global.group = group;
+            opts.onStopSelecting ? opts.onStopSelecting(event, ui) : {};
+        },
+        
+        //onStartSelecting RETURN EVENT UI
+        start:function( event, ui ) {
+            opts.onStartSelecting ? opts.onStartSelecting(event, ui) : {};
+        },
+        
+        //onUnselected RETURN EVENT UI
+        unselected: function(event, ui){
+            global.group = [];
+            opts.onUnselected ? opts.onUnselected(event, ui) : {};
+        },
+        
+        //onUnselecting RETURN EVENT UI
+        unselecting:function(event, ui) {
+            opts.onUnselecting ? opts.onUnselecting(event, ui) : {};
+        }
+        
+        });
+        
+            </script>
 </body>
 </html>
