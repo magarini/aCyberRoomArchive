@@ -203,8 +203,22 @@ button:hover{
 .carousel-item{
     width:350px;
 }
-
+.carousel:hover{
+    width:350px;
+    transform: scale(1.5);
+    z-index: 2;
+    box-shadow:5px 10px 20px black;
+}
 iframe{
     margin:20px;
+    background-color: white;
+    border:1px  solid;
+
+}
+
+iframe:hover{
+    transform: scale(1.5);
+    z-index: 2;
+    box-shadow:5px 10px 20px black;
 
 }
