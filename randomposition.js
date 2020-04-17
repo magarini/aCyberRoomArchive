@@ -3,7 +3,7 @@ function setup() {
     canvas.parent('multidraggable');
 //   canvas.position(0, 0);
   canvas.style('z-index','-1');
-canvas.position(0,50);
+canvas.position(0,80);
     let buttons = selectAll('.imgdrag');
 for (let i = 0; i < buttons.length; i++) {
     
