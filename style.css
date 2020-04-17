@@ -229,11 +229,20 @@ iframe:hover{
 
 .imgdrag{
     border:1px solid;
+    color:black;
 }
 
 .imgdrag:hover{
     transform: scale(1.2);
     z-index: 2;
     box-shadow:5px 10px 20px black;
+    color:black;
 
+
+}
+
+.link{
+    font-size: 2em;
+    color:rgb(156, 6, 76);
+    font-weight: bold;
 }
